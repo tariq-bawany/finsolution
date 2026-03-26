@@ -44,7 +44,7 @@ const ServiceDetail = ({ icon: Icon, num, title, description, longDesc, items, c
           {cardData.map((d) => (
             <div key={d.label} className="flex items-center justify-between border-b border-border pb-2 last:border-0">
               <span className="text-sm text-muted-foreground">{d.label}</span>
-              <span className={`text-sm font-semibold ${d.highlight ? "text-accent" : "text-foreground"}`}>{d.value}</span>
+              <span className={`text-sm font-semibold ${d.highlight ? "text-primary" : "text-foreground"}`}>{d.value}</span>
             </div>
           ))}
         </div>
@@ -142,7 +142,7 @@ const Services = () => (
   <main>
     <section className="py-16 border-b border-border">
       <div className="container">
-        <p className="text-sm font-semibold uppercase tracking-wider text-accent mb-2">Our Services</p>
+        <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Our Services</p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           Financial Services Designed{" "}<br className="hidden sm:block" />for Business Clarity
         </h1>

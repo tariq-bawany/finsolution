@@ -160,7 +160,7 @@ const Index = () => (
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((s, i) => (
           <ScrollReveal key={s.title} delay={i * 120} direction="scale">
-            <div className="group h-full rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
+            <div className="group h-full rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-accent/5">
               <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3">
                 <s.icon className="h-6 w-6 text-primary" />
               </div>
@@ -240,7 +240,7 @@ const Index = () => (
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((ind, i) => (
             <ScrollReveal key={ind.label} delay={i * 100} direction="scale">
-              <div className="rounded-xl border border-border bg-card p-6 text-center transition-all hover:border-accent/40">
+              <div className="rounded-xl border border-border bg-card p-6 text-center transition-all hover:border-primary/40">
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                   <ind.icon className="h-6 w-6 text-primary" />
                 </div>
