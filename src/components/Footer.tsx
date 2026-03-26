@@ -18,6 +18,7 @@ const Footer = () => (
           <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
             <li><Link to="/services" className="hover:text-primary transition-colors">Bookkeeping & Accounting</Link></li>
             <li><Link to="/services" className="hover:text-primary transition-colors">Financial Reporting</Link></li>
+            <li><Link to="/services" className="hover:text-primary transition-colors">Payroll Services</Link></li>
             <li><Link to="/services" className="hover:text-primary transition-colors">ERP Implementation</Link></li>
           </ul>
         </div>
