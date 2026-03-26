@@ -3,6 +3,7 @@ import { BookOpen, BarChart3, Settings, CheckCircle, ArrowRight, Building2, Shop
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const services = [
   { icon: BookOpen, title: "Bookkeeping & Accounting", description: "Accurate transaction recording, bank reconciliation, and ledger management to keep your finances in order." },
@@ -52,29 +53,39 @@ const Index = () => (
 
     {/* Services Overview */}
     <section className="container py-20">
-      <SectionHeading title="Our Services" subtitle="End-to-end financial solutions to support your business growth." />
+      <ScrollReveal>
+        <SectionHeading title="Our Services" subtitle="End-to-end financial solutions to support your business growth." />
+      </ScrollReveal>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((s) => (
-          <ServiceCard key={s.title} {...s} />
+        {services.map((s, i) => (
+          <ScrollReveal key={s.title} delay={i * 100}>
+            <ServiceCard {...s} />
+          </ScrollReveal>
         ))}
       </div>
-      <div className="mt-8 text-center">
-        <Button asChild variant="outline">
-          <Link to="/services">View All Services <ArrowRight className="ml-2 h-4 w-4" /></Link>
-        </Button>
-      </div>
+      <ScrollReveal>
+        <div className="mt-8 text-center">
+          <Button asChild variant="outline">
+            <Link to="/services">View All Services <ArrowRight className="ml-2 h-4 w-4" /></Link>
+          </Button>
+        </div>
+      </ScrollReveal>
     </section>
 
     {/* Why Choose Us */}
     <section className="bg-muted py-20">
       <div className="container">
-        <SectionHeading title="Why Choose Us" />
+        <ScrollReveal>
+          <SectionHeading title="Why Choose Us" />
+        </ScrollReveal>
         <div className="mx-auto grid max-w-2xl gap-4 sm:grid-cols-2">
-          {reasons.map((r) => (
-            <div key={r} className="flex items-center gap-3 rounded-lg bg-background p-4 shadow-sm">
-              <CheckCircle className="h-5 w-5 shrink-0 text-accent" />
-              <span className="font-medium text-foreground">{r}</span>
-            </div>
+          {reasons.map((r, i) => (
+            <ScrollReveal key={r} delay={i * 80}>
+              <div className="flex items-center gap-3 rounded-lg bg-background p-4 shadow-sm">
+                <CheckCircle className="h-5 w-5 shrink-0 text-accent" />
+                <span className="font-medium text-foreground">{r}</span>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -82,14 +93,18 @@ const Index = () => (
 
     {/* Process */}
     <section className="container py-20">
-      <SectionHeading title="How We Work" subtitle="A simple, structured approach to managing your finances." />
+      <ScrollReveal>
+        <SectionHeading title="How We Work" subtitle="A simple, structured approach to managing your finances." />
+      </ScrollReveal>
       <div className="grid gap-8 sm:grid-cols-3">
-        {steps.map((s) => (
-          <div key={s.num} className="text-center">
-            <span className="text-4xl font-bold text-primary/20">{s.num}</span>
-            <h3 className="mt-2 text-lg font-semibold text-foreground">{s.title}</h3>
-            <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
-          </div>
+        {steps.map((s, i) => (
+          <ScrollReveal key={s.num} delay={i * 120}>
+            <div className="text-center">
+              <span className="text-4xl font-bold text-primary/20">{s.num}</span>
+              <h3 className="mt-2 text-lg font-semibold text-foreground">{s.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
+            </div>
+          </ScrollReveal>
         ))}
       </div>
     </section>
@@ -97,52 +112,60 @@ const Index = () => (
     {/* Industries */}
     <section className="bg-muted py-20">
       <div className="container">
-        <SectionHeading title="Industries We Serve" />
+        <ScrollReveal>
+          <SectionHeading title="Industries We Serve" />
+        </ScrollReveal>
         <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {industries.map((ind) => (
-            <div key={ind.label} className="flex flex-col items-center gap-3 rounded-lg bg-background p-6 shadow-sm">
-              <ind.icon className="h-8 w-8 text-primary" />
-              <span className="text-sm font-medium text-foreground">{ind.label}</span>
-            </div>
+          {industries.map((ind, i) => (
+            <ScrollReveal key={ind.label} delay={i * 80}>
+              <div className="flex flex-col items-center gap-3 rounded-lg bg-background p-6 shadow-sm">
+                <ind.icon className="h-8 w-8 text-primary" />
+                <span className="text-sm font-medium text-foreground">{ind.label}</span>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
     </section>
 
     {/* CTA */}
-    <section className="container py-20 text-center">
-      <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Get Started with Your Financial Management Today</h2>
-      <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-        Let us handle the numbers while you focus on growing your business.
-      </p>
-      <Button asChild size="lg" className="mt-8">
-        <Link to="/contact">Book a Free Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
-      </Button>
-    </section>
+    <ScrollReveal>
+      <section className="container py-20 text-center">
+        <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Get Started with Your Financial Management Today</h2>
+        <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
+          Let us handle the numbers while you focus on growing your business.
+        </p>
+        <Button asChild size="lg" className="mt-8">
+          <Link to="/contact">Book a Free Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
+        </Button>
+      </section>
+    </ScrollReveal>
 
     {/* Coming Soon */}
-    <section className="border-t border-border bg-card py-20">
-      <div className="container text-center">
-        <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-accent">Coming Soon</span>
-        <h2 className="mt-4 text-2xl font-bold text-foreground sm:text-3xl">ERP for Rental Businesses</h2>
-        <p className="mx-auto mt-3 max-w-lg text-muted-foreground">
-          We are developing ERP solutions tailored for rental-based businesses to manage inventory, billing, and financial reporting.
-        </p>
-        <div className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="flex-1 rounded-md border border-input bg-background px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="flex-1 rounded-md border border-input bg-background px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
-          />
-          <Button type="button">Register Interest</Button>
+    <ScrollReveal>
+      <section className="border-t border-border bg-card py-20">
+        <div className="container text-center">
+          <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-accent">Coming Soon</span>
+          <h2 className="mt-4 text-2xl font-bold text-foreground sm:text-3xl">ERP for Rental Businesses</h2>
+          <p className="mx-auto mt-3 max-w-lg text-muted-foreground">
+            We are developing ERP solutions tailored for rental-based businesses to manage inventory, billing, and financial reporting.
+          </p>
+          <div className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="flex-1 rounded-md border border-input bg-background px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="flex-1 rounded-md border border-input bg-background px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
+            />
+            <Button type="button">Register Interest</Button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </ScrollReveal>
   </main>
 );
 
