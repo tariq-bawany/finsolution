@@ -51,7 +51,7 @@ const Index = () => (
             </span>
             <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-in" style={{ animationDelay: "0.1s" }}>
               Reliable Accounting &{" "}
-              <em className="font-display italic text-accent not-italic" style={{ fontStyle: "italic" }}>Bookkeeping Services</em>{" "}
+              <em className="font-display italic text-primary not-italic" style={{ fontStyle: "italic" }}>Bookkeeping Services</em>{" "}
               for Growing Businesses
             </h1>
             <p className="mt-6 max-w-lg text-lg text-muted-foreground animate-fade-in" style={{ animationDelay: "0.2s" }}>
@@ -88,7 +88,7 @@ const Index = () => (
                     <p className="text-xs text-muted-foreground">Accuracy</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-accent">+18%</p>
+                    <p className="text-2xl font-bold text-primary">+18%</p>
                     <p className="text-xs text-muted-foreground">YoY Growth</p>
                   </div>
                 </div>
@@ -113,11 +113,11 @@ const Index = () => (
         {/* Stats bar */}
         <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8 border-t border-border pt-8 animate-fade-in" style={{ animationDelay: "0.5s" }}>
           <div>
-            <p className="text-3xl font-bold text-foreground">200<span className="text-accent">+</span></p>
+            <p className="text-3xl font-bold text-foreground">200<span className="text-primary">+</span></p>
             <p className="text-sm text-muted-foreground">Clients Served</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-foreground">99<span className="text-accent">%</span></p>
+            <p className="text-3xl font-bold text-foreground">99<span className="text-primary">%</span></p>
             <p className="text-sm text-muted-foreground">Accuracy Rate</p>
           </div>
           <div>
@@ -125,7 +125,7 @@ const Index = () => (
             <p className="text-sm text-muted-foreground">Missed Payroll Deadlines</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-foreground">5<span className="text-accent">+</span></p>
+            <p className="text-3xl font-bold text-foreground">5<span className="text-primary">+</span></p>
             <p className="text-sm text-muted-foreground">Industries Covered</p>
           </div>
         </div>
@@ -138,7 +138,7 @@ const Index = () => (
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
           {trustBadges.map((b) => (
             <div key={b.label} className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
-              <b.icon className="h-4 w-4 text-accent" />
+              <b.icon className="h-4 w-4 text-primary" />
               {b.label}
             </div>
           ))}
@@ -149,7 +149,7 @@ const Index = () => (
     {/* Services Overview */}
     <section className="container py-20">
       <ScrollReveal direction="fade">
-        <p className="text-center text-sm font-semibold uppercase tracking-wider text-accent mb-2">What We Offer</p>
+        <p className="text-center text-sm font-semibold uppercase tracking-wider text-primary mb-2">What We Offer</p>
         <h2 className="text-center text-3xl font-bold text-foreground sm:text-4xl">
           Comprehensive Financial{" "}<br className="hidden sm:block" />Management Services
         </h2>
@@ -160,13 +160,13 @@ const Index = () => (
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((s, i) => (
           <ScrollReveal key={s.title} delay={i * 120} direction="scale">
-            <div className="group h-full rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
+            <div className="group h-full rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-accent/5">
               <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3">
                 <s.icon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-lg font-semibold text-foreground">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.description}</p>
-              <Link to="/services" className="mt-4 inline-flex items-center text-sm font-medium text-accent hover:text-primary transition-colors">
+              <Link to="/services" className="mt-4 inline-flex items-center text-sm font-medium text-primary hover:text-primary transition-colors">
                 Learn More <ArrowRight className="ml-1 h-3.5 w-3.5" />
               </Link>
             </div>
@@ -179,7 +179,7 @@ const Index = () => (
     <section className="bg-secondary py-20">
       <div className="container">
         <ScrollReveal direction="left">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent mb-2">Why CAPEXLIFY</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Why CAPEXLIFY</p>
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
             Built on Precision.{" "}<br className="hidden sm:block" />Driven by Results.
           </h2>
@@ -208,7 +208,7 @@ const Index = () => (
     {/* Process */}
     <section className="container py-20">
       <ScrollReveal direction="fade">
-        <p className="text-center text-sm font-semibold uppercase tracking-wider text-accent mb-2">How It Works</p>
+        <p className="text-center text-sm font-semibold uppercase tracking-wider text-primary mb-2">How It Works</p>
         <h2 className="text-center text-3xl font-bold text-foreground sm:text-4xl">Simple, Structured Onboarding Process</h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
           Getting started with CAPEXLIFY is straightforward. We follow a proven three-step process to set up and manage your financials seamlessly.
@@ -231,7 +231,7 @@ const Index = () => (
     <section className="bg-secondary py-20">
       <div className="container">
         <ScrollReveal direction="right">
-          <p className="text-center text-sm font-semibold uppercase tracking-wider text-accent mb-2">Industries We Serve</p>
+          <p className="text-center text-sm font-semibold uppercase tracking-wider text-primary mb-2">Industries We Serve</p>
           <h2 className="text-center text-3xl font-bold text-foreground sm:text-4xl">Tailored for Your Industry</h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
             Every industry has unique financial requirements. CAPEXLIFY specialises in delivering accounting solutions that fit your specific sector and operational model.
@@ -240,7 +240,7 @@ const Index = () => (
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((ind, i) => (
             <ScrollReveal key={ind.label} delay={i * 100} direction="scale">
-              <div className="rounded-xl border border-border bg-card p-6 text-center transition-all hover:border-accent/40">
+              <div className="rounded-xl border border-border bg-card p-6 text-center transition-all hover:border-primary/40">
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                   <ind.icon className="h-6 w-6 text-primary" />
                 </div>
@@ -258,7 +258,7 @@ const Index = () => (
       <div className="container">
         <ScrollReveal direction="scale">
           <div className="rounded-2xl border border-border bg-card p-12 text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-accent mb-2">Take Action Today</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Take Action Today</p>
             <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
               Get Started with Your Financial{" "}<br className="hidden sm:block" />Management Today
             </h2>
