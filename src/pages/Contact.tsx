@@ -68,7 +68,7 @@ const Contact = () => {
         <div className="grid gap-12 lg:grid-cols-5">
           {/* Left Info */}
           <div className="lg:col-span-2 space-y-8">
-            <ScrollReveal>
+            <ScrollReveal direction="left">
               <div>
                 <h2 className="text-xl font-bold text-foreground">Let's Talk Business</h2>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -77,7 +77,7 @@ const Contact = () => {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={100}>
+            <ScrollReveal delay={100} direction="left">
               <div className="space-y-4">
                 {contactInfo.map((c) => (
                   <div key={c.title} className="flex gap-3 rounded-xl border border-border bg-card p-4">
@@ -93,7 +93,7 @@ const Contact = () => {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={200}>
+            <ScrollReveal delay={200} direction="left">
               <div>
                 <h3 className="text-sm font-semibold text-foreground mb-3">What to Expect</h3>
                 <ul className="space-y-2">
@@ -110,7 +110,7 @@ const Contact = () => {
 
           {/* Form */}
           <div className="lg:col-span-3">
-            <ScrollReveal>
+            <ScrollReveal direction="right">
               <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
                 {submitted ? (
                   <div className="text-center py-12">

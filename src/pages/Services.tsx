@@ -15,8 +15,8 @@ interface ServiceDetailProps {
 }
 
 const ServiceDetail = ({ icon: Icon, num, title, description, longDesc, items, cardTitle, cardData }: ServiceDetailProps) => (
-  <ScrollReveal>
-    <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+  <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+    <ScrollReveal direction="left">
       <div>
         <div className="flex items-center gap-3 mb-4">
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
@@ -36,6 +36,8 @@ const ServiceDetail = ({ icon: Icon, num, title, description, longDesc, items, c
           ))}
         </ul>
       </div>
+    </ScrollReveal>
+    <ScrollReveal direction="right" delay={150}>
       <div className="rounded-xl border border-border bg-card p-6">
         <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">{cardTitle}</h4>
         <div className="space-y-3">
@@ -47,8 +49,8 @@ const ServiceDetail = ({ icon: Icon, num, title, description, longDesc, items, c
           ))}
         </div>
       </div>
-    </div>
-  </ScrollReveal>
+    </ScrollReveal>
+  </div>
 );
 
 const sections: ServiceDetailProps[] = [
@@ -136,7 +138,7 @@ const Services = () => (
       ))}
     </div>
 
-    <ScrollReveal>
+    <ScrollReveal direction="scale">
       <section className="border-t border-border bg-card py-16">
         <div className="container text-center">
           <h2 className="text-2xl font-bold text-foreground sm:text-3xl">Not Sure Which Service You Need?</h2>

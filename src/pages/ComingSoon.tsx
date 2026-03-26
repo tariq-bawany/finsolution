@@ -67,7 +67,7 @@ const ComingSoon = () => {
       <section className="container py-20">
         <div className="grid gap-6 md:grid-cols-3">
           {features.map((f, i) => (
-            <ScrollReveal key={f.title} delay={i * 100}>
+            <ScrollReveal key={f.title} delay={i * 100} direction="scale">
               <div className="rounded-xl border border-border bg-card p-6 h-full">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
                   <f.icon className="h-5 w-5 text-primary" />
@@ -83,7 +83,7 @@ const ComingSoon = () => {
       {/* Target Industries + Interest Form */}
       <section className="bg-secondary py-20">
         <div className="container grid gap-12 lg:grid-cols-2">
-          <ScrollReveal>
+          <ScrollReveal direction="left">
             <div>
               <h2 className="text-2xl font-bold text-foreground">Who Is This Built For?</h2>
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -97,7 +97,7 @@ const ComingSoon = () => {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={100}>
+          <ScrollReveal delay={100} direction="right">
             <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
               {submitted ? (
                 <div className="text-center py-8">
