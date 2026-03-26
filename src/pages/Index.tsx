@@ -51,7 +51,7 @@ const Index = () => (
             </span>
             <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl animate-fade-in" style={{ animationDelay: "0.1s" }}>
               Reliable Accounting &{" "}
-              <em className="font-display italic text-accent not-italic" style={{ fontStyle: "italic" }}>Bookkeeping Services</em>{" "}
+              <em className="font-display italic text-primary not-italic" style={{ fontStyle: "italic" }}>Bookkeeping Services</em>{" "}
               for Growing Businesses
             </h1>
             <p className="mt-6 max-w-lg text-lg text-muted-foreground animate-fade-in" style={{ animationDelay: "0.2s" }}>
