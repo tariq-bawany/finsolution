@@ -33,7 +33,7 @@ const About = () => (
 
     {/* Our Story */}
     <section className="container py-20">
-      <ScrollReveal>
+      <ScrollReveal direction="fade">
         <div className="mx-auto max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Our Story</p>
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Founded on a Commitment to Financial Clarity</h2>
@@ -55,7 +55,7 @@ const About = () => (
     {/* Mission & Vision */}
     <section className="bg-secondary py-20">
       <div className="container grid gap-8 md:grid-cols-2">
-        <ScrollReveal>
+        <ScrollReveal direction="left">
           <div className="rounded-xl border border-border bg-card p-8">
             <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
               <Target className="h-5 w-5 text-primary" />
@@ -66,7 +66,7 @@ const About = () => (
             </p>
           </div>
         </ScrollReveal>
-        <ScrollReveal delay={100}>
+        <ScrollReveal delay={100} direction="right">
           <div className="rounded-xl border border-border bg-card p-8">
             <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
               <Eye className="h-5 w-5 text-primary" />
@@ -82,13 +82,13 @@ const About = () => (
 
     {/* Values */}
     <section className="container py-20">
-      <ScrollReveal>
+      <ScrollReveal direction="up">
         <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">What Drives Us</p>
         <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Our Core Values</h2>
       </ScrollReveal>
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {values.map((v, i) => (
-          <ScrollReveal key={v.num} delay={i * 80}>
+          <ScrollReveal key={v.num} delay={i * 100} direction={i % 2 === 0 ? "left" : "right"}>
             <div className="rounded-xl border border-border bg-card p-6">
               <span className="text-3xl font-bold text-primary/20">{v.num}</span>
               <h3 className="mt-2 text-lg font-semibold text-foreground">{v.title}</h3>
@@ -102,7 +102,7 @@ const About = () => (
     {/* Stats */}
     <section className="bg-secondary py-16">
       <div className="container">
-        <ScrollReveal>
+        <ScrollReveal direction="scale">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
@@ -116,7 +116,7 @@ const About = () => (
     </section>
 
     {/* CTA */}
-    <ScrollReveal>
+    <ScrollReveal direction="up">
       <section className="py-20">
         <div className="container text-center">
           <h2 className="text-3xl font-bold text-foreground">Ready to Partner with CAPEXLIFY?</h2>

@@ -143,7 +143,7 @@ const Index = () => (
 
     {/* Services Overview */}
     <section className="container py-20">
-      <ScrollReveal>
+      <ScrollReveal direction="fade">
         <p className="text-center text-sm font-semibold uppercase tracking-wider text-primary mb-2">What We Offer</p>
         <h2 className="text-center text-3xl font-bold text-foreground sm:text-4xl">
           Comprehensive Financial{" "}<br className="hidden sm:block" />Management Services
@@ -154,7 +154,7 @@ const Index = () => (
       </ScrollReveal>
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s, i) => (
-          <ScrollReveal key={s.title} delay={i * 100}>
+          <ScrollReveal key={s.title} delay={i * 120} direction="scale">
             <div className="group h-full rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
               <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3">
                 <s.icon className="h-6 w-6 text-primary" />
@@ -173,7 +173,7 @@ const Index = () => (
     {/* Why Us */}
     <section className="bg-secondary py-20">
       <div className="container">
-        <ScrollReveal>
+        <ScrollReveal direction="left">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Why CAPEXLIFY</p>
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
             Built on Precision.{" "}<br className="hidden sm:block" />Driven by Results.
@@ -184,7 +184,7 @@ const Index = () => (
         </ScrollReveal>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {whyUs.map((item, i) => (
-            <ScrollReveal key={item.title} delay={i * 80}>
+            <ScrollReveal key={item.title} delay={i * 100} direction={i % 2 === 0 ? "left" : "right"}>
               <div className="flex gap-4 rounded-xl border border-border bg-card p-6">
                 <div className="shrink-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
                   <item.icon className="h-5 w-5 text-primary" />
@@ -202,7 +202,7 @@ const Index = () => (
 
     {/* Process */}
     <section className="container py-20">
-      <ScrollReveal>
+      <ScrollReveal direction="fade">
         <p className="text-center text-sm font-semibold uppercase tracking-wider text-primary mb-2">How It Works</p>
         <h2 className="text-center text-3xl font-bold text-foreground sm:text-4xl">Simple, Structured Onboarding Process</h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
@@ -211,7 +211,7 @@ const Index = () => (
       </ScrollReveal>
       <div className="mt-12 grid gap-8 md:grid-cols-3">
         {steps.map((s, i) => (
-          <ScrollReveal key={s.num} delay={i * 120}>
+          <ScrollReveal key={s.num} delay={i * 150} direction="up">
             <div className="relative rounded-xl border border-border bg-card p-6">
               <span className="text-5xl font-bold text-primary/15">{s.num}</span>
               <h3 className="mt-2 text-lg font-semibold text-foreground">{s.title}</h3>
@@ -225,7 +225,7 @@ const Index = () => (
     {/* Industries */}
     <section className="bg-secondary py-20">
       <div className="container">
-        <ScrollReveal>
+        <ScrollReveal direction="right">
           <p className="text-center text-sm font-semibold uppercase tracking-wider text-primary mb-2">Industries We Serve</p>
           <h2 className="text-center text-3xl font-bold text-foreground sm:text-4xl">Tailored for Your Industry</h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
@@ -234,7 +234,7 @@ const Index = () => (
         </ScrollReveal>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((ind, i) => (
-            <ScrollReveal key={ind.label} delay={i * 80}>
+            <ScrollReveal key={ind.label} delay={i * 100} direction="scale">
               <div className="rounded-xl border border-border bg-card p-6 text-center transition-all hover:border-primary/30">
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                   <ind.icon className="h-6 w-6 text-primary" />
@@ -251,7 +251,7 @@ const Index = () => (
     {/* CTA */}
     <section className="py-20">
       <div className="container">
-        <ScrollReveal>
+        <ScrollReveal direction="scale">
           <div className="rounded-2xl border border-border bg-card p-12 text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Take Action Today</p>
             <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
