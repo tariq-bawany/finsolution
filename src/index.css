@@ -71,13 +71,32 @@
 @layer utilities {
   .scroll-reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal-up {
+    transform: translateY(32px);
+  }
+
+  .scroll-reveal-left {
+    transform: translateX(-40px);
+  }
+
+  .scroll-reveal-right {
+    transform: translateX(40px);
+  }
+
+  .scroll-reveal-scale {
+    transform: scale(0.92);
+  }
+
+  .scroll-reveal-fade {
+    transform: none;
   }
 
   .scroll-reveal.scroll-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) translateX(0) scale(1);
   }
 
   .text-gradient-gold {
