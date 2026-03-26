@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BookOpen, BarChart3, Settings, Store, ArrowRight } from "lucide-react";
+import { BookOpen, BarChart3, Settings, Store, DollarSign, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -44,7 +44,7 @@ const ServiceDetail = ({ icon: Icon, num, title, description, longDesc, items, c
           {cardData.map((d) => (
             <div key={d.label} className="flex items-center justify-between border-b border-border pb-2 last:border-0">
               <span className="text-sm text-muted-foreground">{d.label}</span>
-              <span className={`text-sm font-semibold ${d.highlight ? "text-primary" : "text-foreground"}`}>{d.value}</span>
+              <span className={`text-sm font-semibold ${d.highlight ? "text-accent" : "text-foreground"}`}>{d.value}</span>
             </div>
           ))}
         </div>
@@ -84,7 +84,30 @@ const sections: ServiceDetailProps[] = [
     ],
   },
   {
-    icon: Settings, num: "03", title: "ERP Implementation & System Setup",
+    icon: DollarSign, num: "03", title: "Payroll Services",
+    description: "Timely, accurate payroll processing so your employees are paid correctly — every single time.",
+    longDesc: "CAPEXLIFY manages your entire payroll cycle end-to-end, from salary calculations and tax withholdings to compliance filings and direct deposits. We ensure zero missed deadlines and full regulatory compliance across jurisdictions.",
+    items: [
+      "Salary and wage calculation with overtime and bonuses",
+      "Federal, state, and local payroll tax withholdings",
+      "Direct deposit setup and payment processing",
+      "Payslip generation and employee self-service portals",
+      "Year-end W-2 and 1099 preparation and filing",
+      "Benefits administration and deduction management",
+      "Multi-state and international payroll compliance",
+    ],
+    cardTitle: "Payroll Run — March 2025",
+    cardData: [
+      { label: "Total Employees", value: "42" },
+      { label: "Gross Payroll", value: "$186,400" },
+      { label: "Tax Withholdings", value: "-$38,200" },
+      { label: "Benefits Deductions", value: "-$12,800" },
+      { label: "Net Payroll", value: "$135,400", highlight: true },
+      { label: "Processing Status", value: "Complete ✓", highlight: true },
+    ],
+  },
+  {
+    icon: Settings, num: "04", title: "ERP Implementation & System Setup",
     description: "A well-implemented ERP system transforms how your business manages finance, inventory, and operations.",
     longDesc: "CAPEXLIFY guides you through every stage of ERP implementation — from system selection to go-live — ensuring a smooth transition with minimal operational disruption.",
     items: ["ERP system selection and requirements analysis", "System configuration and chart of accounts setup", "Historical data migration and validation", "Financial module setup (AP, AR, GL, fixed assets)", "Workflow automation and approval routing", "Staff training, documentation, and post-go-live support"],
@@ -99,7 +122,7 @@ const sections: ServiceDetailProps[] = [
     ],
   },
   {
-    icon: Store, num: "04", title: "Industry-Specific Accounting Solutions",
+    icon: Store, num: "05", title: "Industry-Specific Accounting Solutions",
     description: "Not all businesses are the same — neither are their accounting requirements.",
     longDesc: "CAPEXLIFY delivers specialised accounting solutions designed for the unique financial complexities of e-commerce businesses, startups seeking funding, and service-based companies managing project profitability.",
     items: ["E-commerce accounting with platform integration (Shopify, Amazon)", "Multi-currency accounting for international businesses", "Startup financial setup and investor-ready financial models", "Small business accounting packages with dedicated support", "Project-based accounting for consultancies and agencies", "Industry-specific chart of accounts and reporting templates"],
@@ -119,12 +142,12 @@ const Services = () => (
   <main>
     <section className="py-16 border-b border-border">
       <div className="container">
-        <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Our Services</p>
+        <p className="text-sm font-semibold uppercase tracking-wider text-accent mb-2">Our Services</p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           Financial Services Designed{" "}<br className="hidden sm:block" />for Business Clarity
         </h1>
         <p className="mt-4 max-w-2xl text-muted-foreground">
-          From foundational bookkeeping to ERP implementation, every CAPEXLIFY service is built around precision, compliance, and scalable financial management.
+          From foundational bookkeeping and payroll to ERP implementation, every CAPEXLIFY service is built around precision, compliance, and scalable financial management.
         </p>
       </div>
     </section>
