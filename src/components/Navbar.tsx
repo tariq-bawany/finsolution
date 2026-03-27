@@ -16,10 +16,10 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <nav className="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-xl font-bold tracking-tight">
-          <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground text-sm font-bold">C</span>
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">C</span>
           <span className="text-foreground">CAPEX<span className="text-primary">LIFY</span></span>
         </Link>
 
@@ -30,14 +30,14 @@ const Navbar = () => {
               key={link.to}
               to={link.to}
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === link.to ? "text-primary border-b-2 border-primary pb-0.5" : "text-muted-foreground"
+                location.pathname === link.to ? "text-primary" : "text-muted-foreground"
               }`}
             >
               {link.label}
             </Link>
           ))}
-          <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link to="/contact">Book Free Consultation</Link>
+          <Button asChild size="sm" className="rounded-full bg-foreground text-card hover:bg-foreground/90">
+            <Link to="/contact">Get Started</Link>
           </Button>
         </div>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-border bg-background px-6 py-4 md:hidden">
+        <div className="border-t border-border bg-card px-6 py-4 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -60,8 +60,8 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Button asChild size="sm" className="mt-3 w-full bg-primary text-primary-foreground">
-            <Link to="/contact" onClick={() => setOpen(false)}>Book Free Consultation</Link>
+          <Button asChild size="sm" className="mt-3 w-full rounded-full bg-foreground text-card">
+            <Link to="/contact" onClick={() => setOpen(false)}>Get Started</Link>
           </Button>
         </div>
       )}

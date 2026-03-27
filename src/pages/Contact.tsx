@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 const serviceOptions = [
   "Bookkeeping & Accounting",
   "Financial Reporting",
+  "Payroll Services",
   "ERP Implementation",
   "Industry-Specific Accounting",
   "Full Package / Not Sure Yet",
@@ -39,10 +40,7 @@ const Contact = () => {
       return;
     }
     setLoading(true);
-    setTimeout(() => {
-      setSubmitted(true);
-      setLoading(false);
-    }, 800);
+    setTimeout(() => { setSubmitted(true); setLoading(false); }, 800);
   };
 
   const resetForm = () => {
@@ -52,36 +50,34 @@ const Contact = () => {
 
   return (
     <main>
-      <section className="py-16 border-b border-border">
+      <section className="py-16 border-b border-border" style={{ background: "var(--hero-gradient)" }}>
         <div className="container">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Get In Touch</p>
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Book Your Free{" "}<br className="hidden sm:block" />Consultation Today
+          <h1 className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            Book Your Free<br className="hidden sm:block" /> Consultation Today
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            No commitments. No obligations. Just a focused conversation about your financial needs and how CAPEXLIFY can help you move forward with confidence.
+            No commitments. No obligations. Just a focused conversation about your financial needs and how CAPEXLIFY can help.
           </p>
         </div>
       </section>
 
       <section className="container py-20">
         <div className="grid gap-12 lg:grid-cols-5">
-          {/* Left Info */}
           <div className="lg:col-span-2 space-y-8">
             <ScrollReveal direction="left">
               <div>
                 <h2 className="text-xl font-bold text-foreground">Let's Talk Business</h2>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Reach out through any of the channels below or fill in the contact form. Our team typically responds within 2–4 business hours.
+                  Reach out through any channel below or fill in the contact form. We respond within 2–4 business hours.
                 </p>
               </div>
             </ScrollReveal>
-
             <ScrollReveal delay={100} direction="left">
               <div className="space-y-4">
                 {contactInfo.map((c) => (
-                  <div key={c.title} className="flex gap-3 rounded-xl border border-border bg-card p-4">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <div key={c.title} className="flex gap-3 rounded-2xl border border-border bg-card p-4 shadow-sm">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10">
                       <c.icon className="h-4 w-4 text-primary" />
                     </div>
                     <div>
@@ -92,7 +88,6 @@ const Contact = () => {
                 ))}
               </div>
             </ScrollReveal>
-
             <ScrollReveal delay={200} direction="left">
               <div>
                 <h3 className="text-sm font-semibold text-foreground mb-3">What to Expect</h3>
@@ -108,10 +103,9 @@ const Contact = () => {
             </ScrollReveal>
           </div>
 
-          {/* Form */}
           <div className="lg:col-span-3">
             <ScrollReveal direction="right">
-              <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
+              <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-sm">
                 {submitted ? (
                   <div className="text-center py-12">
                     <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
@@ -119,9 +113,9 @@ const Contact = () => {
                     </div>
                     <h3 className="text-xl font-bold text-foreground">Message Sent Successfully!</h3>
                     <p className="mt-2 text-sm text-muted-foreground max-w-sm mx-auto">
-                      Thank you for reaching out to CAPEXLIFY. One of our financial experts will be in touch within 24 hours to schedule your free consultation.
+                      Thank you for reaching out. One of our financial experts will be in touch within 24 hours.
                     </p>
-                    <Button onClick={resetForm} variant="outline" className="mt-6 border-border text-foreground">
+                    <Button onClick={resetForm} variant="outline" className="mt-6 rounded-full border-border text-foreground">
                       Send Another Message
                     </Button>
                   </div>
@@ -132,65 +126,42 @@ const Contact = () => {
                       <div className="grid gap-4 sm:grid-cols-2">
                         <div>
                           <label className="mb-1 block text-xs font-medium text-muted-foreground">First Name *</label>
-                          <input
-                            type="text" value={form.firstName}
-                            onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-                            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring"
-                          />
+                          <input type="text" value={form.firstName} onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+                            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring" />
                         </div>
                         <div>
-                          <label className="mb-1 block text-xs font-medium text-muted-foreground">Last Name *</label>
-                          <input
-                            type="text" value={form.lastName}
-                            onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-                            className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring"
-                          />
+                          <label className="mb-1 block text-xs font-medium text-muted-foreground">Last Name</label>
+                          <input type="text" value={form.lastName} onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+                            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring" />
                         </div>
                       </div>
                       <div>
                         <label className="mb-1 block text-xs font-medium text-muted-foreground">Email Address *</label>
-                        <input
-                          type="email" value={form.email}
-                          onChange={(e) => setForm({ ...form, email: e.target.value })}
-                          className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring"
-                        />
+                        <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
+                          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring" />
                       </div>
                       <div>
                         <label className="mb-1 block text-xs font-medium text-muted-foreground">Phone / WhatsApp</label>
-                        <input
-                          type="tel" value={form.phone}
-                          onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                          className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring"
-                        />
+                        <input type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring" />
                       </div>
                       <div>
                         <label className="mb-1 block text-xs font-medium text-muted-foreground">Service You're Interested In</label>
-                        <select
-                          value={form.service}
-                          onChange={(e) => setForm({ ...form, service: e.target.value })}
-                          className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring"
-                        >
+                        <select value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })}
+                          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring">
                           <option value="">Select a service...</option>
-                          {serviceOptions.map((s) => (
-                            <option key={s} value={s}>{s}</option>
-                          ))}
+                          {serviceOptions.map((s) => <option key={s} value={s}>{s}</option>)}
                         </select>
                       </div>
                       <div>
                         <label className="mb-1 block text-xs font-medium text-muted-foreground">Your Message *</label>
-                        <textarea
-                          value={form.message}
-                          onChange={(e) => setForm({ ...form, message: e.target.value })}
-                          rows={4}
-                          className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring resize-none"
-                        />
+                        <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} rows={4}
+                          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring resize-none" />
                       </div>
-                      <Button type="submit" disabled={loading} className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                      <Button type="submit" disabled={loading} className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
                         {loading ? "Sending..." : "Send Message & Book Consultation"} <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
-                      <p className="text-center text-xs text-muted-foreground">
-                        🔒 Your data is secure and will never be shared with third parties.
-                      </p>
+                      <p className="text-center text-xs text-muted-foreground">🔒 Your data is secure and will never be shared.</p>
                     </form>
                   </>
                 )}
