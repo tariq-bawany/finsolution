@@ -73,7 +73,7 @@ const sections: ServiceDetailProps[] = [
     description: "Clear, accurate financial reports empower business owners and investors to make confident, data-driven decisions.",
     longDesc: "CAPEXLIFY prepares comprehensive financial statements in accordance with international accounting standards, providing the financial visibility your business needs.",
     items: ["Profit & Loss (Income) Statement preparation", "Balance sheet and net worth reporting", "Cash flow statement and liquidity analysis", "Variance reporting and budget vs. actual analysis", "Monthly financial close and management accounts", "Custom KPI dashboards and executive summaries"],
-    cardTitle: "Financial Summary — Dec 2024",
+    cardTitle: "Financial Summary — Mar 2025",
     cardData: [
       { label: "Total Revenue", value: "$248,500" },
       { label: "Cost of Goods Sold", value: "$98,200" },
