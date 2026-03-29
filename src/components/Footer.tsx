@@ -7,7 +7,7 @@ const Footer = () => (
         <div>
           <div className="flex items-center gap-2 text-lg font-bold">
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">C</span>
-            <span className="text-card">CAPEX<span className="text-primary">LIFY</span></span>
+            <span className="text-card">AZ<span className="text-primary">HIRA</span></span>
           </div>
           <p className="mt-3 text-sm text-card/60">
             Reliable Accounting & Financial Solutions Partner for Businesses.

@@ -11,12 +11,12 @@ const features = [
 ];
 
 const targetIndustries = [
-  "Equipment rental companies",
+  "Manufacturing companies",
   "Vehicle & transport rentals",
   "Property rental businesses",
-  "Event & furniture hire",
-  "Construction equipment hire",
-  "Technology & AV rental",
+  "Event organizers",
+  "Construction companies",
+  "Tech agency",
 ];
 
 const businessTypes = ["Equipment Rental", "Vehicle / Transport Rental", "Property Rental", "Event / Furniture Hire", "Construction Equipment", "Other"];
@@ -45,10 +45,10 @@ const ComingSoon = () => {
             🚧 Coming Soon
           </span>
           <h1 className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            ERP for Rental Businesses
+            Customized ERP
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            We are developing a purpose-built ERP solution specifically tailored for rental-based businesses. Manage inventory, automate billing, and maintain crystal-clear financial reporting.
+            We are developing a purpose-built ERP solution specifically tailored for all type of businesses. Manage inventory, automate billing, monthly sales report, and maintain crystal-clear financial reporting.
           </p>
         </div>
       </section>
@@ -92,12 +92,12 @@ const ComingSoon = () => {
                     <Rocket className="h-7 w-7 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">You're on the list!</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">We'll notify you the moment our Rental ERP goes live.</p>
+                  <p className="mt-2 text-sm text-muted-foreground">We'll notify you the moment our ERP goes live.</p>
                 </div>
               ) : (
                 <>
                   <h3 className="text-lg font-bold text-foreground mb-1">Register Your Interest</h3>
-                  <p className="text-sm text-muted-foreground mb-6">Be the first to know when our Rental ERP launches.</p>
+                  <p className="text-sm text-muted-foreground mb-6">Be the first to know when our ERP launches.</p>
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <label className="mb-1 block text-xs font-medium text-muted-foreground">Full Name *</label>
@@ -113,7 +113,7 @@ const ComingSoon = () => {
                       <label className="mb-1 block text-xs font-medium text-muted-foreground">Business Type</label>
                       <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })}
                         className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none focus:ring-2 focus:ring-ring">
-                        <option value="">Select your rental category...</option>
+                        <option value="">Select your category...</option>
                         {businessTypes.map((t) => <option key={t} value={t}>{t}</option>)}
                       </select>
                     </div>

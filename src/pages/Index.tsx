@@ -67,7 +67,7 @@ const Index = () => (
               <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20">
                 <Link to="/contact">Get Your Free Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full border-border text-foreground hover:bg-card">
+              <Button asChild size="lg" variant="outline" className="rounded-full border-border text-foreground ">
                 <Link to="/services">Explore Services</Link>
               </Button>
             </div>
@@ -76,13 +76,13 @@ const Index = () => (
           {/* Dashboard Card */}
           <div className="hidden lg:block animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <div className="relative">
-              <div className="absolute -top-3 -left-3 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary border border-primary/20">
+              <div className="absolute -top-5 -left-3 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary border border-primary/20">
                 ✅ Financial Reports Ready
               </div>
               <div className="rounded-2xl border border-border bg-card p-6 shadow-xl">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Financial Overview</span>
-                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Q4 2024</span>
+                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">Q4 2025</span>
                 </div>
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div>
@@ -296,7 +296,7 @@ const Index = () => (
               <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20">
                 <Link to="/contact">Book a Free Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full border-card/20 text-card hover:bg-card/10">
+              <Button asChild size="lg" variant="outline" className="bg-primary rounded-full border-card/20 text-card hover:bg-primary/90">
                 <Link to="/services">View All Services</Link>
               </Button>
             </div>
